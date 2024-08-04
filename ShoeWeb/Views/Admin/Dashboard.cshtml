@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<div class="container">
+    <h2>Dashboard</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card shadow" style="cursor:pointer;">
+                <div class="card-body bg-danger">
+                    <h5 class="card-title text-center font-weight-bold">Sport</h5>
+                    <p class="card-text text-center font-weight-bold text-dark">@ViewBag.SportCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow" style="cursor:pointer;">
+                <div class="card-body" style="background-color: #97a9b9;">
+                    <h5 class="card-title text-center font-weight-bold">Casual</h5>
+                    <p class="card-text text-center font-weight-bold text-dark">@ViewBag.CasualCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow" style="cursor:pointer;">
+                <div class="card-body bg-warning">
+                    <h5 class="card-title text-center font-weight-bold">Formal</h5>
+                    <p class="card-text text-center font-weight-bold text-dark">@ViewBag.FormalCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card shadow" style="cursor:pointer;">
+                <div class="card-body bg-success">
+                    <h5 class="card-title text-center font-weight-bold">Customer</h5>
+                    <p class="card-text text-center font-weight-bold text-dark">@ViewBag.CustomerCount</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

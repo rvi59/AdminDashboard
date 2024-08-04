@@ -1,0 +1,120 @@
+﻿@*@model IEnumerable<ShoeWeb.Models.Brand>*@
+
+@{
+    ViewBag.Title = "BrandList";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<h2>BrandList</h2>
+<p>
+    @Html.ActionLink("Create New", "AddBrand", null, new { @class = "btn btn-primary" })
+</p>
+@*<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Brand_Name)
+        </th>
+
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand_Name)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditBrand", new { id = item.Brand_Id }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Delete", "DeleteBrand", new { id = item.Brand_Id }, new { @class = "btn btn-danger", onclick = "return confirm('Are you sure you want to delete this brand?');" })
+            </td>
+        </tr>
+    }
+
+</table>*@
+
+
+<table id="tBrandList" class="table table-bordered">
+    <thead>
+        <tr style="border: solid 1px #000000">
+            <th style="display:none">BrandId</th>
+            <th>Sr.No</th>
+            <th>BrandName</th>
+            <th>Action</th>    
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "/Admin/GetBrandList",
+                data: "{}",
+                dataType: "json",
+                success: function (data) {
+
+                   
+                    if(data && data !== "No record Found") {
+                        var z = 0;
+                        for (var i = 0; i < data.length; i++) {
+
+                            $("#tBrandList").append
+                                ("<tr><td style='display:none'>" + data[i].Brand_Id +
+                                    "</td><td>" + (z + 1) +
+                                    "</td><td>" + data[i].Brand_Name +
+                                    "</td><td><button class='btn btn-primary edit-btn' data-id='" + data[i].Brand_Id + "'>Edit</button> | <button class='btn btn-danger delete-btn' data-id='" + data[i].Brand_Id + "'>Delete</button></td></tr>" +
+                                    "</td></tr>"
+                                );
+                            z++;
+                        }
+
+                        $('#tBrandList').DataTable({ pageLength: 5, lengthMenu: [[5, 10, 20], [5, 10, 20]] });
+
+                        $('#tBrandList').on('click', '.edit-btn', function () {
+                            var brandId = $(this).data('id');
+                            window.location.href = '/Admin/EditBrand/' + brandId;
+                        });
+
+                        $('#tBrandList').on('click', '.delete-btn', function () {
+                            var brandId = $(this).data('id');
+                            if (confirm('Are you sure you want to delete this brand?')) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/Admin/DeleteBrand",
+                                    data: { id: brandId },
+                                    success: function () {
+                                        alert('Brand deleted successfully.');
+                                        window.location.reload();
+                                    },
+                                    error: function () {
+                                        alert('Error deleting brand.');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    else {
+                        //$("#tSizeList").html("<tr><td colspan='4'>No Record Found</td></tr>");
+
+
+                        $("#tBrandList").append
+                            ("<tr class='odd'><td valign='top' colspan='3' class='dataTables_empty'>No matching records found</td></tr>");
+                    }
+
+
+                },
+                error: function (data) {
+                    alert("Error");
+                }
+            });
+        });
+</script>
+
+

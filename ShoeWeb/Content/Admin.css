@@ -1,0 +1,268 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #fafafa;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+/*
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+} */
+
+.bg-light {
+    background-color: #454444 !important;
+}
+
+.bg-turbo-yellow {
+    background-color: #525252;
+}
+
+.fa-align-left {
+    color: #fff;
+}
+
+.nav-item img {
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-right: 25px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+/* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
+
+.text-sidebar {
+    color: #6b6b6b;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #5E5E5E;
+    color: #6b6b6b;
+    transition: all 0.3s;
+}
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #454444;
+        color: #fff;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #b28b00;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        color: #fff;
+    }
+
+        #sidebar ul li a:hover {
+            color: #fc8300;
+            background: #6b6b6b;
+        }
+
+    #sidebar ul li.active > a,
+    a[aria-expanded="true"] {
+        color: #fff;
+        background: #5E5E5E;
+    }
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #0F1A29;
+    color: #fff;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+
+
+/* --------------------------------------------------- CONTENT STYLE ----------------------------------------------------- */
+
+
+
+
+#content {
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+/* --------------------------------------------------- MEDIAQUERIES ----------------------------------------------------- */
+@media (max-width: 999px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
+
+    #sidebar {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+
+    #sidebarCollapse1 span {
+        display: none;
+    }
+}
+
+
+.logout-link {
+    border: none;
+    color: white;
+}
+
+.logout-link:hover {
+    border: none;
+    color: white;
+}
+
+#btnLogout {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+
+    #btnLogout:hover {
+        background: transparent;
+        border: none;
+        color: #fc8300;
+    }
+
+
+#btnLogout1 {
+    background: transparent;
+    border: none;
+}
+
+
+    #btnLogout1:hover {
+        background: transparent;
+        border: none;
+        color: #fc8300 !important;
+    }
+
+.enlarged-image {
+    display: none;
+    position: absolute;
+    top: -300px;
+    left: 300px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width:768px){
+
+    #tCustomerList_wrapper, #tCategoryList_wrapper, #tProductList_wrapper, #tSizeList_wrapper, #tBrandList_wrapper {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    
+
+}

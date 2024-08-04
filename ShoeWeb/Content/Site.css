@@ -1,0 +1,457 @@
+﻿
+/*Signup*/
+.myrow {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+}
+
+.navbar{
+    padding:0!important;
+}
+
+.lbl {
+    font-weight: bold;
+    color: #2D2D2D;
+    font-family: 'Lato', sans-serif;
+}
+
+.leftside {
+    background: #CFD6E5;
+    background: -webkit-linear-gradient(to top, #CFD6E5 0%, #E6ECF3 500%);
+    background: -moz-linear-gradient(to top, #CFD6E5 0%, #E6ECF3 50%);
+    background: linear-gradient(to top, #CFD6E5 0%, #E6ECF3 50%);
+}
+
+#signbtn {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 20px;
+    background-color: #F95E77;
+    color: #fff;
+    font-size: 20px;
+}
+
+    #signbtn:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #Ea2143;
+        font-size: 21px;
+        transition: all .2s ease-in-out;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+.regRespo0 {
+    width: 100%;
+    display: inline-block;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.regRespo1 {
+    width: 100%;
+    display: inline-block;
+    text-align:center;  
+}
+
+@media screen and (min-width:770px) and (max-width:990px) {
+    .regRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .regRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+   /* #signbtn {
+        padding-left: 90px;
+        padding-right: 90px;
+    }*/
+}
+
+
+
+@media screen and (min-width:400px) and (max-width:560px) {
+
+   
+
+    .regRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .regRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    /*#signbtn {
+        padding-left: 100px;
+        padding-right: 100px;
+    }*/
+}
+
+
+
+@media screen and (min-width:350px) and (max-width:399px) {
+    /*.myrow {
+        margin: 2px;
+    }*/
+
+    .regRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .regRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+   /* #signbtn {
+        padding-left: 90px;
+        padding-right: 90px;
+    }*/
+}
+
+
+
+@media screen and (min-width:300px) and (max-width:349px) {
+
+    /*.myrow {
+        margin: 2px;
+    }*/
+
+    .regRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .regRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    /*#signbtn {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }*/
+}
+
+
+
+
+@media screen and (max-width:447px) {
+    #myRegis {
+        font-size: 1.6em;
+    }
+}
+
+
+.logbtn {
+    color: #F95E77;
+    text-align: center;
+    margin-top: -10px;
+    font-family: 'Lato', sans-serif;
+    text-decoration:none;
+}
+
+
+    .logbtn:hover {
+        font-size: 18px;
+        color: #F95E77;
+        transition: all .2s ease-in-out;
+        text-decoration: none;
+    }
+
+
+
+    /*Login*/
+
+.img1 {
+    margin-left: 50px;
+}
+
+.leftside {
+    background: #CFD6E5;
+    background: -webkit-linear-gradient(to top, #CFD6E5 0%, #E6ECF3 500%);
+    background: -moz-linear-gradient(to top, #CFD6E5 0%, #E6ECF3 50%);
+    background: linear-gradient(to top, #CFD6E5 0%, #E6ECF3 50%);
+}
+
+.Loginbtn {
+    padding-top: 4px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 20px;
+    border: none;
+    background-color: #F95E77;
+    color: #fff;
+    font-size: 20px;
+}
+
+    .Loginbtn:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #Ea2143;
+        font-size: 20px;
+        transition: all .2s ease-in-out;
+        padding-top: 6px;
+        padding-bottom: 8px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+
+
+.logRespo0 {
+    width: 100%;
+    display: inline-block;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.logRespo1 {
+    width: 100%;
+    display: inline-block;
+    text-align:center;
+}
+
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+
+    .logRespo1 {
+        width: 50%;
+        display: inline-block;
+        float: right;
+    }
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:990px) {
+
+    .logRespo1 {
+        width: 50%;
+        display: inline-block;
+        float: right;
+    }
+
+
+    .logRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .Loginbtn {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:766px) {
+
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+
+    .myrow {
+        width:100%;
+    }
+
+    .logRespo1 {
+        width: 50%;
+        display: inline-block;
+        float: right;
+    }
+
+
+    .logRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .Loginbtn {
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+}
+
+
+
+
+@media screen and (min-width:400px) and (max-width:479px) {
+
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .myrow {
+        width:100%;
+    }
+
+    .logRespo1 {
+        width: 50%;     
+        display: inline-block;
+        float: right;
+    }
+
+
+    .logRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .Loginbtn {
+        padding-left: 110px;
+        padding-right: 110px;
+        margin-left: -5px;
+    }
+}
+
+
+
+@media screen and (min-width:360px) and (max-width:399px) {
+
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .myrow {
+        width: 100%;
+    }
+
+    .logRespo1 {
+        width: 50%;
+        display: inline-block;
+        float: right;
+    }
+
+
+    .logRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .Loginbtn {
+        padding-left: 90px;
+        padding-right: 90px;
+        margin-left: -10px;
+    }
+}
+
+
+
+
+@media screen and (min-width:300px) and (max-width:359px) {
+
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+
+    .myrow {
+        width: 100%;
+    }
+
+    .logRespo1 {
+        width: 50%;
+        display: inline-block;
+        float: right;
+    }
+
+
+    .logRespo0 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logRespo1 {
+        width: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .Loginbtn {
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-left: -10px;
+    }
+}
+
+
+@media screen and (max-width:447px) {
+    #myLogHead {
+        font-size: 2em;
+    }
+}
+
+
+.regisbtn {
+    color: #F95E77;
+    text-align: center;
+    margin-top: -10px;
+    font-family: 'Lato', sans-serif;
+    text-decoration:none;
+}
+
+
+    .regisbtn:hover {
+        font-size: 18px;
+        color: #F95E77;
+        transition: all .2s ease-in-out;
+        text-decoration: none;
+    }

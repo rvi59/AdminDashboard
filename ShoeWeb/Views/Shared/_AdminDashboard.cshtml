@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquerydatatable")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+    <div>
+        <div>
+            <div class="wrapper">
+                <!-- Sidebar  -->
+
+
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <h3>Shoe Factory</h3>
+                        <button type="button" id="sidebarCollapse1" class="btn text-sidebar bg-turbo-yellow">
+                            <i class="fas fa-align-left"></i>
+                            <span></span>
+                        </button>
+                    </div>
+                    <ul class="list-unstyled components">
+                        <p>Welcome <Label ID="lbluser" runat="server" Text="" Font-Bold="true"></Label></p>
+                        <li>
+                            <a href="~/Admin/Dashboard"><i class="fas fa-tachometer-alt"></i><span>&nbsp;&nbsp;&nbsp;Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="#brandSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-bandcamp"></i><span>&nbsp;&nbsp;&nbsp;Brand</span></a>
+                            <ul class="collapse list-unstyled" id="brandSubmenu">
+
+                                <li>
+
+                                    @Html.ActionLink("Add New Brand", "AddBrand", "Admin")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Brand List", "BrandList", "Admin")
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-sitemap"></i><span>&nbsp;&nbsp;&nbsp;Category</span></a>
+                            <ul class="collapse list-unstyled" id="categorySubmenu">
+
+                                <li>
+
+                                    @Html.ActionLink("Add New Category", "AddCategory", "Admin")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Category List", "CategoryList", "Admin")
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#sizeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-weight"></i><span>&nbsp;&nbsp;&nbsp;Size</span></a>
+                            <ul class="collapse list-unstyled" id="sizeSubmenu">
+
+                                <li>
+
+                                    @Html.ActionLink("Add New Size", "AddSize", "Admin")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Size List", "SizeList", "Admin")
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cart-arrow-down"></i><span>&nbsp;&nbsp;&nbsp;Product</span></a>
+                            <ul class="collapse list-unstyled" id="productSubmenu">
+
+                                <li>
+
+                                    @Html.ActionLink("Add New Product", "AddProduct", "Admin")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Product List", "ProductList", "Admin")
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="#CustomerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-weight"></i><span>&nbsp;&nbsp;&nbsp;Customers</span></a>
+                            <ul class="collapse list-unstyled" id="CustomerSubmenu">
+
+                                <li>
+                                    @Html.ActionLink("Customer List", "CustomerList", "Admin")
+                                </li>
+                              
+                            </ul>
+                        </li>
+
+
+
+                        @*<li>
+                            <a href="#"><i class="fas fa-cog"></i><span>&nbsp;&nbsp;&nbsp;Setting</span></a>
+                        </li>*@
+                    </ul>
+
+                    <ul class="list-unstyled CTAs">
+                        <li>
+                            <a class="download">
+                                @*<i class="fas fa-sign-out-alt"></i><span>*@
+                                 @*<input type="button" id="btnLogout" value="Logout" />*@
+                                 @Html.ActionLink("Logout", "Logout", "Account")
+                                @*</span>*@
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Page Content  -->
+
+                <div id="content">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <button type="button" id="sidebarCollapse" class="btn text-sidebar bg-turbo-yellow">
+                                <i class="fas fa-align-left"></i>
+
+                            </button>
+                            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-align-justify"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <img src="~/Content/Images/profile.png" height="25" width="25" alt="Alternate Text" />
+                                    </li>
+                                    <li class="nav-item">
+                                        <label id="mydate" style="color:white;font-size:small;"></label>
+                                        @*<input type="button" id="btnLogout1" value="Logout" class="nav-link" />*@
+                                        @*@Html.ActionLink("Logout", "Logout", "Account", new { @class = "logout-link" })*@
+                                        @*<asp:Button ID="btnLogout1" runat="server" CssClass="nav-link" Text="Logout" OnClick="btnLogout1_Click" />*@
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <br />
+                    
+                    @RenderBody()
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Admin")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>
